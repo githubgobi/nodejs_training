@@ -30,13 +30,13 @@ var mysql = require('mysql');
 // Lesson First - START 
 /*http.createServer(function (req, res) {
 	 // File Module - START
-  	// fs.readFile('files/demofile1.html', function(err, data) {
+  	// fs.readFile('files/test/demofile1.html', function(err, data) {
   	// 	res.writeHead(200, {'Content-Type': 'text/html'});
   	// 	res.write(data);
   	// 	// res.write(err);
   	// });
 
-  	var rs = fs.createReadStream('files/demofile1.html');
+  	var rs = fs.createReadStream('files/test/demofile1.html');
 		rs.on('open', function () {
 		  console.log('The file is open');
 	});
@@ -91,7 +91,7 @@ var mysql = require('mysql');
 		    var form = new formidable.IncomingForm();
 		    form.parse(req, function (err, fields, files) {
 		    	var oldpath = files.filetoupload.path;
-		    	var newpath = 'E:\/Dev\/Node\/files/' + files.filetoupload.name;
+		    	var newpath = 'E:\/Dev\/Node\/files/test/' + files.filetoupload.name;
 		    	fs.readFile(oldpath, function (err, data) {
 		            if (err) throw err;
 		            console.log('File read!');
